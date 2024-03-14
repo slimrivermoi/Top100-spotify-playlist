@@ -1,0 +1,5 @@
+.env
+token.txt
+songs_uri.txt
+spotipy.oauth2
+test.py
