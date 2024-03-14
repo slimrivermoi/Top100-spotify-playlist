@@ -44,20 +44,6 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=SPOTIFY_CLIENT_ID,
 ## obtain the user id
 user_id = sp.current_user()['id']
 
-
-### retrieve the token from token.txt
-with open("token.txt") as file:
-    data = file.read()
-js = json.loads(data)
-spotify_token = js["access_token"]
-
-search_endpoint = "https://api.spotify.com/v1/search"
-headers = {
-    "Authorization": "Bearer "+spotify_token
-}
-
-
-
 ### loop through songs_list to create a list for all songs_uri
 songs_uri =[]
 year = request_date.split("-")[0]
